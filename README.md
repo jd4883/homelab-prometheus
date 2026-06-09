@@ -1,5 +1,7 @@
 # Prometheus (kube-prometheus-stack)
 
+Values-only instantiation for Argo CD. Chart: expectedbehaviors/prometheus. This repo supplies values.yaml only.
+
 Helm chart wrapping **kube-prometheus-stack** (Prometheus Operator) with Prometheus, Alertmanager, Grafana, node-exporter, and kube-state-metrics. Configured for **HA**: multiple replicas, PDBs, soft pod anti-affinity, **Longhorn HDD** storage (metrics do not require SSD). **Namespace: observability.** Grafana uses **anonymous auth** behind **nginx global auth**; TLS via **cert-manager** (passive). **Managed by Argo CD** when enabled.
 
 ---
